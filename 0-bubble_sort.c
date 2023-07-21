@@ -30,10 +30,7 @@ void bubble_sort(int *array, size_t size)
 				}
 			}
 			if (swap == 0) /* if there were no swaps */
-			{
 				print_array(array, size);
-				break;
-			}
 		}
 	}
 }
