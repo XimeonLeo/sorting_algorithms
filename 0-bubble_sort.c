@@ -13,23 +13,27 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t first, index, swap, tmp;
 
-	for (first = 0; first < size - 1; first++)
+	if (array)
 	{
-		swap = 0;
-		for (index = 0; index < size - 1 - first; index++)
+		for (first = 0; first < size - 1; first++)
 		{
-			if (array[index] > array[index + 1])
+			swap = 0;
+			for (index = 0; index < size - 1 - first; index++)
 			{
-				tmp = array[index];
-				array[index] = array[index + 1];
-				array[index + 1] = tmp;
-				print_array(array, size);
-				swap = 1;
+				if (array[index] > array[index + 1])
+				{
+					tmp = array[index];
+					array[index] = array[index + 1];
+					array[index + 1] = tmp;
+					print_array(array, size);
+					swap = 1;
+				}
 			}
-		}
-		if (swap == 0) /* if there were no swaps */
-		{
-			print_array(array, size);
+			if (swap == 0) /* if there were no swaps */
+			{
+				print_array(array, size);
+				break;
+			}
 		}
 	}
 }
