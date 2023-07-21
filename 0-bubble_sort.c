@@ -2,9 +2,12 @@
 
 /**
  * bubble_sort - sorts out an array using bubble sort
+ * in ascenfing order
  *
  * @array: the unsorted array
  * @size: size of the array
+ *
+ * Return: nothing
  */
 void bubble_sort(int *array, size_t size)
 {
@@ -27,7 +30,6 @@ void bubble_sort(int *array, size_t size)
 		if (swap == 0) /* if there were no swaps */
 		{
 			print_array(array, size);
-			break;
 		}
 	}
 }
