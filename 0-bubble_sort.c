@@ -13,7 +13,7 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t first, index, swap, tmp;
 
-	if (array)
+	if (array != NULL)
 	{
 		for (first = 0; first < size - 1; first++)
 		{
@@ -29,8 +29,8 @@ void bubble_sort(int *array, size_t size)
 					swap = 1;
 				}
 			}
+			if (swap == 0) /* if there were no swaps */
+				print_array(array, size);
 		}
-		if (swap == 0) /* if there were no swaps */
-			print_array(array, size);
 	}
 }
